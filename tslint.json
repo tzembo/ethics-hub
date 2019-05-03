@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier",
+    "tslint-plugin-prettier"
+  ],
+  "linterOptions": {
+    "exclude": []
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": [
+      true,
+      {
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
+    "ordered-imports": true,
+    "import-spacing": true,
+    "no-console": false,
+    "no-debugger": false,
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false,
+    "member-access": [true, "no-public"],
+    "radix": false,
+    "prefer-for-of": false
+  }
+}

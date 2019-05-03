@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "EthicsHub",
+    "version": "0.1",
+    "description": "Ethics for GitHub",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvhPsmEhltsBGRFgHDVTZn4KAVYCUTklxGTnirPy/JKIRPr211UU9XaSbamOL9GqWC2L6rN9bDh0WX4RmWqyRcKq2cDvffWwYj76Gv8/tdzUQhkQP6fKfDUyfztaJ8Mzr6fFoYGzQuKv/KmM0YaSwSjpNku8QfF6txIw9T6SCh3SIqm20X8M5IVYsSQjFZX6xlKcXyp+IFWkmWVDYSuXxoARbZv/QjR9LdJrh2kXiUrPXinDYAFTQvlOerSOThd7zOMqEpvK8usH/zql7UYrJstK4pY3fUGTTPWYoa6dLHc3NXoC8jMsgmHxTptre6XXL1y/bt0egdHc24YbGpAdBSQIDAQAB",
+    "permissions": [
+      "identity",
+      "storage",
+      "https://github.com/*"
+    ],
+    "background": {
+      "scripts": ["./background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://github.com/*"
+        ],
+        "css": ["./main.css"],
+        "js": ["./main.js"],
+        "run_at": "document_end",
+        "exclude_matches": [
+          "https://github.com/pages/*"
+        ]
+      }
+    ]
+  }

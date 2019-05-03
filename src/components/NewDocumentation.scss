@@ -1,0 +1,49 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridItem {
+  color: #0366d6;
+  width: 100%;
+  border-bottom: 1px solid #d1d5da;
+  border-left: 3px solid transparent;
+  padding: 15px;
+  padding-left: 20px;
+}
+
+.gridItem:hover {
+  cursor: pointer;
+}
+
+.selected {
+  border-left-color: #c47f00;
+  .title {
+    color: black;
+  }
+  .description {
+    color: black;
+  }
+}
+
+.title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.description {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.linkWrapper {
+  text-decoration: none;
+}
+
+.linkWrapper:hover {
+  text-decoration: none;
+}
+
+.header {
+  margin-top: 40px;
+}

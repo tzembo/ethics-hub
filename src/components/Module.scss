@@ -1,0 +1,13 @@
+.selected {
+    border-left: 3px #e36209 solid !important;
+    font-weight: 600;
+}
+
+.sectionLabel {
+    width: 100%;
+    background-color: white;
+    border-bottom: 0.5px solid #e1e4e8!important;
+    border-left: 3px transparent solid;
+    display: flex;
+    flex-flow: row;
+}

@@ -1,0 +1,55 @@
+{
+  "name": "parcel-typescript-react-starter",
+  "version": "1.0.0",
+  "description": "Basic starter template for quick frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/main.ts src/background.ts",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "author": "Fil Zembowicz <fil@filosophy.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/chrome": "0.0.81",
+    "@types/jquery": "^3.3.29",
+    "@types/node": "^11.13.2",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.1",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.0.0",
+    "parcel-plugin-typed-css-modules": "^1.1.0",
+    "postcss-modules": "^1.4.1",
+    "prettier": "^1.16.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@types/react-beautiful-dnd": "^11.0.1",
+    "@types/react-modal": "^3.8.1",
+    "@types/react-outside-click-handler": "^1.2.0",
+    "immutability-helper": "^3.0.0",
+    "jquery": "^3.3.1",
+    "react": "^16.8.6",
+    "react-beautiful-dnd": "^11.0.1",
+    "react-dnd": "^7.4.5",
+    "react-dnd-html5-backend": "^7.4.4",
+    "react-dom": "^16.8.6",
+    "react-modal": "^3.8.1",
+    "react-outside-click-handler": "^1.2.3",
+    "react-router-dom": "^4.3.1"
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  }
+}
