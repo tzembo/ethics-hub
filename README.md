@@ -1,24 +1,19 @@
-# parcel-typescript-react-starter
+# Welcome to EthicsHub
 
-Basic starter kit for quick development of react components, what I use as a starter to make little weekend hacks.
+EthicsHub is a Google Chrome extension that modifies the GitHub user interface to integrate ethical questions and documentation into user workflows. The project hopes to alleviate the ethical issues that have arisen in artificial intelligence and machine learning, when models and datasets are widely available for potential misuse.
 
-# Commands
+### Quickstart
 
-Run development server:
+To try out the extension, first clone the GitHub repository.
 
-```
-npm run dev
-```
+    git clone git@github.com:tzembo/ethics-hub.git
 
-Create production bundle:
+Before you build the extension, you'll need to create a `config.json` file in the root directory with two attributes, `client_id` and `client_secret` that correspond to the GitHub application's ID and secret. Contact me to receive these. Then, run the following:
 
-```
-npm run build
-```
+    npm run build
 
-# Features
+Finally, load the `/dist` directory into Google Chrome through the extensions manager. Navigate to a GitHub repository and you should notice the Ethics tab in the navigation bar. Happy documenting!
 
-- Typescript
-- React
-- SCSS and CSS modules
-- TSLint linting + prettier rules
+### Collaborators
+
+I would love help on this project going forward! If you're interested, send me an email at <tzembowicz@gmail.com>.
