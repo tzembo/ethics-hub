@@ -318,111 +318,115 @@ class Documentation extends React.Component<Props, State> {
   }
 
   render() {
-    const ModalContent = () => {
-      switch (this.state.modal) {
-        case modal.GENERATE:
-          return (
-            <div key="modal-content-div">
-              <h2>Generate documentation</h2>
-              <dl key="outer-dl" className="form-group">
-                <dt>
-                  <label htmlFor="file-path">
-                    <span>File path</span>
-                  </label>
-                </dt>
-                <dd>
-                  <input
-                    key="file-path"
-                    className="form-control"
-                    type="text"
-                    onChange={e => this.handleCommitPathChange(e)}
-                    value={this.state.commitPath}
-                    id="file-path"
-                  />
-                  <select
-                    style={{ height: "100%" }}
-                    onChange={e => this.handleCommitFormatChange(e)}
-                    value={this.state.commitFormat}
-                  >
-                    <option value="markdown">.md</option>
-                    <option value="html">.html</option>
-                    <option value="txt">.txt</option>
-                  </select>
-                </dd>
-              </dl>
-              <dl className="form-group">
-                <dt>
-                  <label htmlFor="commit-message">
-                    <span>Commit message</span>
-                  </label>
-                </dt>
-                <dd>
-                  <input
-                    key="commit-message"
-                    className="form-control"
-                    type="text"
-                    onChange={e => this.handleCommitMessageChange(e)}
-                    value={this.state.commitMessage}
-                    id="commit-message"
-                  />
-                </dd>
-              </dl>
-              <button
-                className="btn btn-primary"
-                onClick={this.generateDocumentation}
-                style={{ marginRight: "12px" }}
-              >
-                Generate
-              </button>
-              <button className="btn btn-secondary" onClick={this.hideModal}>
-                Close
-              </button>
-            </div>
-          );
+    let modelContent;
 
-        case modal.EXPORT:
-          return (
-            <div>
-              <h2>Export template</h2>
-              <dl className="form-group">
-                <textarea
+    switch (this.state.modal) {
+      case modal.GENERATE:
+        modelContent = (
+          <div key="modal-content-div">
+            <h2>Generate documentation</h2>
+            <dl key="outer-dl" className="form-group">
+              <dt>
+                <label htmlFor="file-path">
+                  <span>File path</span>
+                </label>
+              </dt>
+              <dd>
+                <input
+                  key="file-path"
                   className="form-control"
-                  id="exported-template"
-                  value={this.exportTemplate()}
+                  type="text"
+                  onChange={e => this.handleCommitPathChange(e)}
+                  value={this.state.commitPath}
+                  id="file-path"
                 />
-              </dl>
-              <button
-                className="btn btn-primary"
-                onClick={copyToClipboard}
-                style={{ marginRight: "12px" }}
-              >
-                Copy to clipboard
-              </button>
-              <button className="btn btn-secondary" onClick={this.hideModal}>
-                Close
-              </button>
-            </div>
-          );
+                <select
+                  style={{ height: "100%" }}
+                  onChange={e => this.handleCommitFormatChange(e)}
+                  value={this.state.commitFormat}
+                >
+                  <option value="markdown">.md</option>
+                  <option value="html">.html</option>
+                  <option value="txt">.txt</option>
+                </select>
+              </dd>
+            </dl>
+            <dl className="form-group">
+              <dt>
+                <label htmlFor="commit-message">
+                  <span>Commit message</span>
+                </label>
+              </dt>
+              <dd>
+                <input
+                  key="commit-message"
+                  className="form-control"
+                  type="text"
+                  onChange={e => this.handleCommitMessageChange(e)}
+                  value={this.state.commitMessage}
+                  id="commit-message"
+                />
+              </dd>
+            </dl>
+            <button
+              className="btn btn-primary"
+              onClick={this.generateDocumentation}
+              style={{ marginRight: "12px" }}
+            >
+              Generate
+            </button>
+            <button className="btn btn-secondary" onClick={this.hideModal}>
+              Close
+            </button>
+          </div>
+        );
+        break;
 
-        case modal.SAVE:
-          return (
-            <div>
-              <div className="flash" style={{ marginBottom: "15px" }}>
-                <strong>
-                  Saving without generating documentation is still under
-                  construction.
-                </strong>{" "}
-                Check back later for the ability to persist your data.
-              </div>
-              <button className="btn btn-secondary" onClick={this.hideModal}>
-                Close
-              </button>
+      case modal.EXPORT:
+        modelContent = (
+          <div>
+            <h2>Export template</h2>
+            <dl className="form-group">
+              <textarea
+                className="form-control"
+                id="exported-template"
+                value={this.exportTemplate()}
+              />
+            </dl>
+            <button
+              className="btn btn-primary"
+              onClick={copyToClipboard}
+              style={{ marginRight: "12px" }}
+            >
+              Copy to clipboard
+            </button>
+            <button className="btn btn-secondary" onClick={this.hideModal}>
+              Close
+            </button>
+          </div>
+        );
+        break;
+
+      case modal.SAVE:
+        modelContent = (
+          <div>
+            <div className="flash" style={{ marginBottom: "15px" }}>
+              <strong>
+                Saving without generating documentation is still under
+                construction.
+              </strong>{" "}
+              Check back later for the ability to persist your data.
             </div>
-          );
-        default:
-          return <div />;
-      }
-    };
+            <button className="btn btn-secondary" onClick={this.hideModal}>
+              Close
+            </button>
+          </div>
+        );
+        break;
+      default:
+        modelContent = <div />;
+        break;
+    }
 
     const title = this.state.isEditingTitle ? (
       <div>
@@ -589,7 +593,7 @@ class Documentation extends React.Component<Props, State> {
     return (
       <div key="hello-world">
         <Modal key="editor-modal" isOpen={this.state.show} style={customStyles}>
-          <ModalContent key="modal-content" />
+          {modelContent}
         </Modal>
 
         <div className="CommunityTemplate-header px-4 bg-white text-right">
