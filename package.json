@@ -1,13 +1,13 @@
 {
-  "name": "parcel-typescript-react-starter",
+  "name": "EthicsHub",
   "version": "1.0.0",
-  "description": "Basic starter template for quick frontend projects",
+  "description": "Facilitating ethics documentation for AI/ML workflows",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/main.ts src/background.ts",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/main.ts src/background.ts"
   },
-  "author": "Fil Zembowicz <fil@filosophy.org>",
+  "author": "Thomas Zembowicz <tzembowicz@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.3.4",
