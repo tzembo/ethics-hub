@@ -1,19 +1,19 @@
 [
   {
     "title": "Deon Ethics Checklist",
-    "description": "Open source checklist for data science projects providing concrete and actionable reminders to developers.",
+    "description": "Open source checklist for data science projects providing concrete and actionable reminders to developers. Learn more here: http://deon.drivendata.org/",
     "type": "url",
     "source_url": "https://raw.githubusercontent.com/drivendataorg/deon/master/deon/assets/checklist.yml"
   },
   {
     "title": "Datasheet for Datasets",
-    "description": "Proposal by Gebru et al. for documenting datasets in a way that's similar to other technical fields, like electronics. Primarily for datasets.",
+    "description": "Proposal by Gebru et al. for documenting datasets in a way that's similar to other technical fields, like electronics. Primarily for datasets. Learn more here: https://arxiv.org/abs/1803.09010",
     "type": "url",
     "source_url": "https://gist.githubusercontent.com/tzembo/2063c586298c5884177b8b252e74d4f8/raw/7abc3c770b58455c9ac27dc07dc4f73f8069ae66/datasheet.yml"
   },
   {
     "title": "Model Card",
-    "description": "Framework by Mitchell et al. for encouraging transparent model reporting. Primarily for models.",
+    "description": "Framework by Mitchell et al. for encouraging transparent model reporting. Primarily for models. Learn more here: https://arxiv.org/abs/1810.03993",
     "type": "url",
     "source_url": "https://gist.githubusercontent.com/tzembo/60b34b5d648b84e4ba3f799aa74f2cf2/raw/bec3cd08526be03e462a5f230f83ff02f50e575e/modelcard.yml"
   },
