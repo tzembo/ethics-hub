@@ -15,7 +15,7 @@
     "title": "Model Card",
     "description": "Framework by Mitchell et al. for encouraging transparent model reporting. Primarily for models. Learn more here: https://arxiv.org/abs/1810.03993",
     "type": "url",
-    "source_url": "https://gist.githubusercontent.com/tzembo/60b34b5d648b84e4ba3f799aa74f2cf2/raw/bec3cd08526be03e462a5f230f83ff02f50e575e/modelcard.yml"
+    "source_url": "https://gist.githubusercontent.com/tzembo/60b34b5d648b84e4ba3f799aa74f2cf2/raw/4ae0220cb79486c8db079f8fb0cf29461bd044fe/modelcard.yml"
   },
   {
     "title": "Custom",
